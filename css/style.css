@@ -68,6 +68,7 @@ header {
 .nav-menu a {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	align-items: center;
 	padding: 0 30px;
 	font-size: 14px;
@@ -331,7 +332,7 @@ header {
 	margin: 12px 0 0 0;
 	display: flex;
 	flex-direction: column;
-	width: 852px;
+	max-width: 852px;
 }
 .team__staff-menu_main-text {
 	text-align: left;
@@ -354,6 +355,7 @@ header {
 }
 .team__social-menu {
 	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -381,12 +383,6 @@ header {
 	align-items: center;
 	max-width: 852px;
 }
-/*.members {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-}*/
-
 .staff {
 	position: relative;
 }
@@ -538,6 +534,7 @@ header {
 }
 .message-contact {
 	display: flex;
+	flex-wrap: wrap;
 	max-width: 1249px;
 	justify-content: center;
 	flex: 1 1 auto;
@@ -654,15 +651,52 @@ footer {
 	padding-right: 15px;
 }
 @media screen and (max-width: 350px) {
-	.intro__text {
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	body {
+		padding: 0;
+	}
+	header {
 		width:  100%;
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+	}
+	.nav-menu li {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+	.intro {
+		width:  100%;
+		text-align: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.intro__text h1 {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.intro__contact-button {
+		margin: 0 auto;
 	}
 	.intro__img {
-		width:  100%;
+		width:  98%;
 		height: auto;
+	}
+	.we-can {
+		margin: 0 auto;
+		align-items: center;
+		text-align: center;
 	}
 	.we-can__text {
 		width:  100%;
+	}
+	.we-can__learn-button {
+		margin: 0 auto;
 	}
 	.we-can__menu {
 		width:  100%;
@@ -671,10 +705,97 @@ footer {
 		width: 100%;
 	}
 	.feature__menu {
+		flex-direction: column;
 		width: 100%;
+		margin: 0 auto;
+	}
+
+	.feature__menu_table {
+		display: flex;
+		flex-wrap: wrap;
 	}
 	.feature__menu_gallery img {
+		margin: 0 auto;
 		width: 100%;
 		height: auto;
-	} 
-} 
+	}
+	.team {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+	.team__text {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.team__staff-menu {
+		justify-content: center;
+	}
+	.team__staff-menu_main-img img {
+		width:  100%;
+		height: auto;
+	}
+	.team__staff-menu_not-main {
+		justify-content: center;
+	}
+	.team__staff-menu_main-text {
+		text-align: center;
+	}
+	.team__social-menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.team__staff-gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.staff__photo {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+	.subscribe__email {
+		margin: 0 auto;
+		max-width: 98%;
+	}
+	.message {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.message__text {
+		width: 100%;
+		text-align: center;
+	}
+	.message-contact-after-box {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.feedback__left-box {
+		display: none;
+	}
+
+	.message-contact {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+	.message__form {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+	.message__input, .message__form_send-button {
+		max-width: 98%;
+	}
+	.feedback__right-box {
+		display: none;
+	} 	
+
+}

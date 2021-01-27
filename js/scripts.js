@@ -2,6 +2,7 @@ let inputPlastic = document.querySelector(.plastic);
 inputPlastic.addEventListner('click',showPopup);
 
 function showPopup() {
-	let popUp = document.querySelector('.popUp');
-	popUp.classList.add('visible')
+	let a = document.querySelector('.popUp');
+	a.classList.add('visible');
+	
 }
